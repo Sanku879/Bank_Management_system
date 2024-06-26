@@ -1,30 +1,28 @@
-show databases
+create database bankmanagement;
 
-use practice
+show databases;
 
-desc Employee;
+use bankmanagement;
 
-Alter table Employee Drop Employee_Father_Name;
+create table signup(formno varchar(20),name varchar(20),fname varchar(20),DOB varchar(20),gender varchar(20),email varchar(30),marital varchar(20),address varchar(50),city varchar(20),State varchar(20),pin varchar(20));
 
-desc Employee;
+select * from signup;
 
-CREATE TABLE emp (
-  emp_name VARCHAR(50),
-  emp_salary DECIMAL(10,2)
-);
+create table signuptwo(formno varchar(20),Religion varchar(20),Income varchar(20),Qualification varchar(20),Occupation varchar(20),PanNo varchar(20),Aadhar_No varchar(20),Senior_citizen varchar(20),Existing_Account varchar(20));
 
-CREATE TABLE emp (
-  emp_name VARCHAR(50),
-  emp_salary DECIMAL(10,2)
-);
-INSERT INTO emp (emp_name, emp_salary) VALUES
-('Shubham Thakur', 50000.00),
-('Aman Chopra', 60000.50),
-('Naveen Tulasi', 75000.75),
-('Bhavika uppala', 45000.25),
-('Nishant jain', 80000.00);
+select * from signuptwo;
 
-select emp_salary from emp
-ORDER By emp_salary Desc
-LIMIT 4,1
-;
+create table Signupthree(formno varchar(20),account_type varchar(25),cardnum varchar(25),pinNum varchar(20),facility varchar(20));
+
+create table login(formno varchar(20),cardnum varchar(25),pinNum varchar(20));
+
+use bankmanagement;
+select * from Signupthree;
+
+select * from login;
+
+select * from bank;
+
+create table bank(pinNum varchar(20), date varchar(50),type varchar(20),amount varchar(20));
+drop table bank;
+select * from bank;
